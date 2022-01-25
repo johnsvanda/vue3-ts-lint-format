@@ -29,14 +29,14 @@
     "vite": "^2.7.2",
     "vue-tsc": "^0.29.8"
   },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": "npm run lint",
+    "*.{css,scss,vue}": "stylelint --fix",
+    "*": "prettier -write"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix",
-    "*": "prettier -w -u"
   }
 }
